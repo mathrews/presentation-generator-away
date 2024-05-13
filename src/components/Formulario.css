@@ -53,6 +53,11 @@
   outline: none;
 }
 
+/* Ajuste para altura de 500px */
+.form-field textarea {
+  height: 200px;
+}
+
 .input-row {
   display: flex;
   gap: 1rem;
@@ -92,7 +97,6 @@
 .button-spacing {
   width: 20px; /* Ou qualquer valor de espaçamento desejado */
 }
-
 
 .submit-button {
   background-color: var(--cor-roxo-azulado); /* Roxo mais azulado */
