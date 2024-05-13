@@ -1,14 +1,20 @@
-// src/components/InputField.js
-
+// InputField.js
 import React from 'react';
-import { FaUser } from 'react-icons/fa';
 
-function InputField({ label, name }) {
+function InputField({ label, name, icon, value, onChange, small }) {
   return (
-    <div className="form-field">
-      <label htmlFor={name}>{label}</label>
+    <div className={`form-field${small ? ' small' : ''}`}>
+      <label htmlFor={name}>
+        {label}
+      </label>
       <div className="input-container">
-        <input type="text" id={name} name={name} />
+        <input
+          type="text"
+          id={name}
+          name={name}
+          value={value}
+          onChange={onChange}
+        />
       </div>
     </div>
   );
