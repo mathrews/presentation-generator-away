@@ -1,0 +1,113 @@
+/* src/components/Formulario.css */
+
+:root {
+  --cor-lilas-claro: #f5f0ff;
+  --cor-roxo-medio: #6a5acd;
+  --cor-lavanda: #d8bfd8;
+  --cor-roxo-medio-escuro: #7b68ee;
+  --cor-cinza-claro: #d3d3d3;
+  --cor-roxo-azulado: #483d8b; /* Roxo mais azulado */
+  --cor-roxo-claro: #9370db; /* Cor clara do mesmo roxo */
+  --cor-azul-escuro: #00008b; /* Azul escuro */
+}
+
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--cor-lilas-claro); /* Lilás claro */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centralizar conteúdo */
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 2rem;
+  color: var(--cor-roxo-medio); /* Roxo Médio */
+  display: flex;
+  align-items: center; /* Centralizar ícone verticalmente */
+}
+
+.form-icon {
+  margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--cor-roxo-medio); /* Roxo Médio */
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--cor-lavanda); /* Lavanda */
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between; /* Distribuir botões */
+}
+
+.input-row .form-field {
+  flex: 1;
+}
+
+.input-row .form-field.small input,
+.input-row .form-field.small textarea {
+  width: 100%; /* Aumentar o tamanho dos campos pequenos */
+}
+
+.input-row .form-field:not(.small) {
+  margin-right: 1.5rem; /* Adicionar espaçamento horizontal entre os campos */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem; /* Espaçamento entre os botões e os campos */
+}
+
+.submit-button,
+.clear-button,
+.generate-button {
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-spacing {
+  width: 20px; /* Ou qualquer valor de espaçamento desejado */
+}
+
+
+.submit-button {
+  background-color: var(--cor-roxo-azulado); /* Roxo mais azulado */
+}
+
+.clear-button {
+  background-color: var(--cor-roxo-claro); /* Cor clara do mesmo roxo */
+}
+
+.generate-button {
+  background-color: var(--cor-azul-escuro); /* Azul escuro */
+}
+
+.submit-button:hover,
+.clear-button:hover,
+.generate-button:hover {
+  filter: brightness(1.2); /* Aumentar brilho ao passar o mouse */
+}
