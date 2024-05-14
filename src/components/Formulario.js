@@ -4,6 +4,7 @@ import TextAreaField from './TextAreaField';
 import Button from './Button';
 import './Formulario.css';
 import { FaGlobe, FaUsers, FaLanguage, FaPrayingHands, FaPeopleCarry, FaInfoCircle, FaCross, FaQuestionCircle, FaChurch, FaHandshake, FaMapMarkedAlt, FaMapPin, FaMapSigns, FaBible } from 'react-icons/fa';
+import gerarApresentacao from '../utils/gerarApresentacao';
 
 function Formulario() {
   const [formData, setFormData] = useState({
@@ -24,7 +25,6 @@ function Formulario() {
     emQueAcreditam: '',
     intercessao: ''
   });
-  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,11 +32,9 @@ function Formulario() {
       ...formData,
       [name]: value
     });
-    setMessage(''); // Limpa a mensagem
   };
 
   const handleClear = () => {
-    console.log("Limpar clicado");
     setFormData({
       nomeDoPovo: '',
       pais: '',
@@ -55,13 +53,15 @@ function Formulario() {
       emQueAcreditam: '',
       intercessao: ''
     });
-    setMessage(''); // Limpa a mensagem
+  };
+
+  const handleGenerate = () => {
+    gerarApresentacao(formData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Lógica para lidar com o envio do formulário
-    setMessage(''); // Limpa a mensagem
   };
 
   return (
@@ -74,6 +74,7 @@ function Formulario() {
           <InputField label={<><FaMapPin className="form-icon" /> Continente</>} name="continente" icon={<FaMapPin />} value={formData.continente} onChange={handleChange} small />
         </div>
         <InputField label={<><FaMapSigns className="form-icon" /> Onde vivem</>} name="ondeVivem" icon={<FaMapSigns />} value={formData.ondeVivem} onChange={handleChange} />
+        <InputField label={<><FaPeopleCarry className="form-icon" /> População</>} name="populacao" icon={<FaPeopleCarry />} value={formData.populacao} onChange={handleChange} />
         <InputField label={<><FaLanguage className="form-icon" /> Idioma e tradução</>} name="idiomaETraducao" icon={<FaLanguage />} value={formData.idiomaETraducao} onChange={handleChange} />
         <InputField label={<><FaPrayingHands className="form-icon" /> Religião</>} name="religiao" icon={<FaPrayingHands />} value={formData.religiao} onChange={handleChange} />
         <InputField label={<><FaChurch className="form-icon" /> Relação com o cristianismo</>} name="relacaoComOCristianismo" icon={<FaChurch />} value={formData.relacaoComOCristianismo} onChange={handleChange} />
@@ -91,9 +92,8 @@ function Formulario() {
         <TextAreaField label={<><FaHandshake className="form-icon" /> Intercessão</>} name="intercessao" placeholder="Intercessão..." value={formData.intercessao} onChange={handleChange} />
         <div className="button-container">
           <Button type="button" className="clear-button" onClick={handleClear}>Limpar</Button>
-          <Button type="submit" className="generate-button">Gerar</Button>
+          <Button type="button" className="generate-button" onClick={handleGenerate}>Gerar</Button>
         </div>
-        {message && <p>{message}</p>}
       </form>
     </div>
   );
