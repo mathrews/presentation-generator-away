@@ -1,7 +1,7 @@
 // TextAreaField.js
 import React from 'react';
 
-function TextAreaField({ label, name, icon, value, onChange }) {
+function TextAreaField({ label, name, icon, value, onChange, autoComplete }) {
   return (
     <div className="form-field">
       <label htmlFor={name}>
@@ -13,6 +13,7 @@ function TextAreaField({ label, name, icon, value, onChange }) {
           name={name}
           value={value}
           onChange={onChange}
+          autoComplete={autoComplete}
         />
       </div>
     </div>
