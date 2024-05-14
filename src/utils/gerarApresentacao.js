@@ -2,7 +2,7 @@ import pptxgen from "pptxgenjs";
 
 const gerarApresentacao = (apresentacao) => {
   // Caminho da imagem de fundo
-  const imagePath = "./background_image.png";
+  const imagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/background_image.png";
 
   // 1. Create a Presentation
   let pres = new pptxgen();
