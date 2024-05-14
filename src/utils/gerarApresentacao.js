@@ -1,18 +1,33 @@
-// src/utils/gerarApresentacao.js
-
-import pptxgen from 'pptxgenjs';
+import pptxgen from "pptxgenjs";
 
 const gerarApresentacao = (apresentacao) => {
-  const pptx = new pptxgen();
+  // Caminho da imagem de fundo
+  const imagePath = "./background_image.png";
 
-  // Adiciona o slide com o texto "Hello Slides"
-  pptx.addSlide({
-    title: 'Hello Slides',
-    addText: { text: 'Hello Slides', x: 1, y: 1, fontSize: 24, bold: true }
+  // 1. Create a Presentation
+  let pres = new pptxgen();
+
+  // 2. Add a Slide to the presentation
+  let slide = pres.addSlide();
+
+  // 3. Add background image
+  slide.background = { path: imagePath }
+  // 4. Add text to the Slide
+  slide.addText("Hello Slides", {
+    x: 1.5,
+    y: 1.5,
+    color: "363636",
+    fill: { color: "F1F1F1" },
+    align: pres.AlignH.center,
   });
 
-  // Salva a apresentação como um arquivo PPTX
-  pptx.writeFile(`${apresentacao.titulo}.pptx`);
+  // Save the presentation as a PPTX file
+  pres.writeFile({
+    fileName: `${apresentacao.titulo}.pptx`
+  })
+  .then(fileName => {
+    console.log(`Presentation saved as: ${fileName}`);
+  });
 };
 
 export default gerarApresentacao;
