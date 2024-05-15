@@ -27,13 +27,26 @@ const gerarApresentacao = (apresentacao) => {
   const imageYPercent = 2; // posição Y da imagem em porcentagem
   slide.addImage({ path: cornerImagePath, w: `${imageWidthPercent}%`, h: `${imageHeightPercent}%`, x: `${imageXPercent}%`, y: `${imageYPercent}%` });
 
-  // Adicionando um quadrado branco ao lado da imagem com 5pt de altura
-  const squareWidthPercent = 100 - imageXPercent - imageWidthPercent; // largura do quadrado em porcentagem
+  // Adicionando um quadrado branco ao lado da imagem com distância de 3% e aumentando em 30pt
+  const distancePercent = 3; // distância em porcentagem
+  const squareWidthPercent = 100 - imageXPercent - imageWidthPercent - distancePercent; // largura do quadrado em porcentagem
   const squareHeightPercent = 5 / slideHeight * 100; // altura do quadrado em porcentagem
   const imageCenterYPercent = imageYPercent + (imageHeightPercent / 2); // centro vertical da imagem em porcentagem
   const squareCenterYPercent = imageCenterYPercent; // centro vertical do quadrado deve ser o mesmo da imagem
   const squareYPercent = squareCenterYPercent - (squareHeightPercent / 2); // posição Y do quadrado em porcentagem
-  slide.addShape(pres.shapes.RECTANGLE, { x: `${imageXPercent + imageWidthPercent}%`, y: `${squareYPercent}%`, w: `${squareWidthPercent}%`, h: `${squareHeightPercent}%`, fill: { color: "FFFFFF" } });
+  slide.addShape(pres.shapes.RECTANGLE, { x: `${imageXPercent + imageWidthPercent + distancePercent}%`, y: `${squareYPercent}%`, w: `${squareWidthPercent}%`, h: `${squareHeightPercent}%`, fill: { color: "FFFFFF" } });
+
+  // Adicionando texto na parte inferior do slide
+  const textoXPercent = imageXPercent; // borda esquerda alinhada com a borda esquerda da imagem
+  const textoYPercent = 100 - 10; // 10pt de distância do bottom do slide
+  slide.addText("Around the World Announcing Yeshua", { x: `${textoXPercent}%`, y: `${textoYPercent}%`, w: "44%", h: "10%", align: pres.AlignLeft, fontSize: 18, fontFace: "Calibri", color: "FFFFFF", bold: true });
+
+  // Adicionando um quadrado branco ao lado direito do texto com distância de 3% e aumentando em 30pt
+  const squareTextWidthPercent = 100 - textoXPercent - 44; // largura do quadrado em porcentagem
+  const squareTextHeightPercent = squareHeightPercent; // altura do quadrado igual ao do quadrado superior
+  const squareTextCenterYPercent = textoYPercent - (squareHeightPercent / 2) + 5; // centro vertical do quadrado igual ao do texto
+  const squareTextXPercent = textoXPercent + 44 + distancePercent; // posição X do quadrado em porcentagem
+  slide.addShape(pres.shapes.RECTANGLE, { x: `${squareTextXPercent}%`, y: `${squareTextCenterYPercent}%`, w: `${squareTextWidthPercent}%`, h: `${squareTextHeightPercent}%`, fill: { color: "FFFFFF" } });
 
   // Save the presentation as a PPTX file
   pres.writeFile({
