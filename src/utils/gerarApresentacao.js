@@ -27,6 +27,14 @@ const gerarApresentacao = (apresentacao) => {
   const imageYPercent = 2; // posição Y da imagem em porcentagem
   slide.addImage({ path: cornerImagePath, w: `${imageWidthPercent}%`, h: `${imageHeightPercent}%`, x: `${imageXPercent}%`, y: `${imageYPercent}%` });
 
+  // Adicionando um quadrado branco ao lado da imagem com 5pt de altura
+  const squareWidthPercent = 100 - imageXPercent - imageWidthPercent; // largura do quadrado em porcentagem
+  const squareHeightPercent = 5 / slideHeight * 100; // altura do quadrado em porcentagem
+  const imageCenterYPercent = imageYPercent + (imageHeightPercent / 2); // centro vertical da imagem em porcentagem
+  const squareCenterYPercent = imageCenterYPercent; // centro vertical do quadrado deve ser o mesmo da imagem
+  const squareYPercent = squareCenterYPercent - (squareHeightPercent / 2); // posição Y do quadrado em porcentagem
+  slide.addShape(pres.shapes.RECTANGLE, { x: `${imageXPercent + imageWidthPercent}%`, y: `${squareYPercent}%`, w: `${squareWidthPercent}%`, h: `${squareHeightPercent}%`, fill: { color: "FFFFFF" } });
+
   // Save the presentation as a PPTX file
   pres.writeFile({
     fileName: `${apresentacao.nomeDoPovo}.pptx`
