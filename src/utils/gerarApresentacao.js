@@ -4,6 +4,7 @@ import AwaySlidePattern from "./AwaySlidePattern";
 import addSlideText from "./awaySlideText";
 import addWorldAndBrazilSlide from "./worldAndBrazilSlide";
 import addLargeTextSlide from "./largeTextSlide";
+import LogoSlide from "./logoSlide";
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
@@ -41,6 +42,11 @@ const gerarApresentacao = (apresentacao) => {
   addLargeTextSlide(pptxgen, pres, "Como vivem", apresentacao.comoVivem);
   addLargeTextSlide(pptxgen, pres, "Em que acreditam", apresentacao.emQueAcreditam);
   addLargeTextSlide(pptxgen, pres, "Intercessão", apresentacao.intercessao);
+
+  // Adiciona slide de logo
+  let logoSlide = pres.addSlide();
+  const logoSlidePattern = new LogoSlide();
+  logoSlidePattern.addContent(pptxgen, logoSlide);
 
   // Salva a apresentação como arquivo PPTX
   pres.writeFile({
