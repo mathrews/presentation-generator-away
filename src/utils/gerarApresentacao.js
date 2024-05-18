@@ -2,10 +2,11 @@ import pptxgen from "pptxgenjs";
 import addTitleSlide from "./titleSlide";
 import AwaySlidePattern from "./AwaySlidePattern";
 import addSlideText from "./awaySlideText";
+import addWorldAndBrazilSlide from "./worldAndBrazilSlide";
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
-  
+
   // Adiciona o slide de título
   let slide = pres.addSlide();
   addTitleSlide(pptxgen, slide, apresentacao);
@@ -24,6 +25,15 @@ const gerarApresentacao = (apresentacao) => {
   addCustomSlide("Idioma e Tradução", apresentacao.idiomaETraducao);
   addCustomSlide("Religião", apresentacao.religiao);
   addCustomSlide("Relação com o Cristianismo", apresentacao.relacaoComOCristianismo);
+
+  // Adiciona slide "Brasil e No Mundo"
+  let worldAndBrazilSlide = pres.addSlide();
+  addWorldAndBrazilSlide(pptxgen, worldAndBrazilSlide, {
+    cristaosNoBrasil: apresentacao.cristaosNoBrasil,
+    evangelicosNoBrasil: apresentacao.evangelicosNoBrasil,
+    cristaosPeloMundo: apresentacao.cristaosPeloMundo,
+    evangelicosPeloMundo: apresentacao.evangelicosPeloMundo
+  });
 
   // Salva a apresentação como arquivo PPTX
   pres.writeFile({
