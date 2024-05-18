@@ -3,6 +3,7 @@ import addTitleSlide from "./titleSlide";
 import AwaySlidePattern from "./AwaySlidePattern";
 import addSlideText from "./awaySlideText";
 import addWorldAndBrazilSlide from "./worldAndBrazilSlide";
+import addLargeTextSlide from "./largeTextSlide";
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
@@ -34,6 +35,12 @@ const gerarApresentacao = (apresentacao) => {
     cristaosPeloMundo: apresentacao.cristaosPeloMundo,
     evangelicosPeloMundo: apresentacao.evangelicosPeloMundo
   });
+
+  // Adiciona slides adicionais com tratamento especial para textos longos
+  addLargeTextSlide(pptxgen, pres, "Introdução", apresentacao.introducao);
+  addLargeTextSlide(pptxgen, pres, "Como vivem", apresentacao.comoVivem);
+  addLargeTextSlide(pptxgen, pres, "Em que acreditam", apresentacao.emQueAcreditam);
+  addLargeTextSlide(pptxgen, pres, "Intercessão", apresentacao.intercessao);
 
   // Salva a apresentação como arquivo PPTX
   pres.writeFile({
