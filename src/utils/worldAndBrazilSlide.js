@@ -1,4 +1,3 @@
-import pptxgen from "pptxgenjs";
 import AwaySlidePattern from "./AwaySlidePattern";
 
 const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
