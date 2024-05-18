@@ -1,7 +1,7 @@
 import pptxgen from "pptxgenjs";
 import addTitleSlide from "./titleSlide";
-import AwaySlidePattern from "./AwaySlidePattern"; // Importação adicionada
-import addSlideText from "./awaySlideText"; // Importação adicionada
+import AwaySlidePattern from "./AwaySlidePattern";
+import addSlideText from "./awaySlideText";
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
@@ -10,15 +10,20 @@ const gerarApresentacao = (apresentacao) => {
   let slide = pres.addSlide();
   addTitleSlide(pptxgen, slide, apresentacao);
 
-  // Adiciona um novo slide com o título "Onde vivem" e o texto desse campo
-  let ondeVivemSlide = pres.addSlide();
+  // Função para adicionar um slide com título e texto
+  const addCustomSlide = (title, text) => {
+    let slide = pres.addSlide();
+    const slidePattern = new AwaySlidePattern();
+    slidePattern.addDefaultContent(pptxgen, slide);
+    addSlideText(pptxgen, slide, title, text);
+  };
 
-  // Adiciona conteúdo padrão ao slide "Onde vivem"
-  const slidePattern = new AwaySlidePattern();
-  slidePattern.addDefaultContent(pptxgen, ondeVivemSlide);
-
-  // Adiciona o título e o texto ao slide "Onde vivem" usando as configurações de awaySlideText
-  addSlideText(pptxgen, ondeVivemSlide, "Onde vivem", apresentacao.ondeVivem);
+  // Adiciona slides personalizados
+  addCustomSlide("Onde vivem", apresentacao.ondeVivem);
+  addCustomSlide("População", apresentacao.populacao);
+  addCustomSlide("Idioma e Tradução", apresentacao.idiomaETraducao);
+  addCustomSlide("Religião", apresentacao.religiao);
+  addCustomSlide("Relação com o Cristianismo", apresentacao.relacaoComOCristianismo);
 
   // Salva a apresentação como arquivo PPTX
   pres.writeFile({

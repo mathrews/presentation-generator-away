@@ -15,7 +15,7 @@ const addSlideText = (pptxgen, slide, title, text) => {
     // Adiciona o texto ao slide
     slide.addText(text, {
       x: "1.6%", 
-      y: "32%", 
+      y: "37%", 
       w: "99%", 
       h: "70%", 
       align: "left", 
