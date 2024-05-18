@@ -1,43 +1,24 @@
 import pptxgen from "pptxgenjs";
-import AwaySlidePattern from "./AwaySlidePattern";
+import addTitleSlide from "./titleSlide";
+import AwaySlidePattern from "./AwaySlidePattern"; // Importação adicionada
+import addSlideText from "./awaySlideText"; // Importação adicionada
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
+  
+  // Adiciona o slide de título
   let slide = pres.addSlide();
+  addTitleSlide(pptxgen, slide, apresentacao);
 
-  // Adiciona conteúdo padrão ao slide
+  // Adiciona um novo slide com o título "Onde vivem" e o texto desse campo
+  let ondeVivemSlide = pres.addSlide();
+
+  // Adiciona conteúdo padrão ao slide "Onde vivem"
   const slidePattern = new AwaySlidePattern();
-  slidePattern.addDefaultContent(pptxgen, slide);
+  slidePattern.addDefaultContent(pptxgen, ondeVivemSlide);
 
-  // Adiciona o texto do campo "nome do povo" em uppercase no centro do slide
-  const nomeDoPovoText = apresentacao.nomeDoPovo.toUpperCase(); // Transforma o texto em maiúsculas
-  const nomeDoPovoTextOptions = {
-    x: "0%", // Posição X no centro do slide
-    y: "-10%", // Posição Y no centro do slide
-    w: "100%", // Largura igual à largura do slide
-    h: "100%", // Altura igual à altura do slide
-    align: "center", // Alinhamento centralizado
-    fontSize: 80, // Tamanho da fonte
-    fontFace: "Calibri", // Tipo de fonte
-    color: "FFFFFF", // Cor do texto (branco)
-    bold: true // Negrito
-  };
-  slide.addText(nomeDoPovoText, nomeDoPovoTextOptions);
-
-  // Adiciona o texto "País - Continente" logo abaixo do título
-  const paisContinenteText = `${apresentacao.pais} - ${apresentacao.continente}`;
-  const paisContinenteTextOptions = {
-    x: "0%", // Posição X no centro do slide
-    y: "10%", // Posição Y no centro do slide
-    w: "100%%", // Largura igual à largura do slide
-    h: "100%", // Altura igual à altura do slide
-    align: "center", // Alinhamento centralizado
-    fontSize: 40, // Tamanho da fonte
-    fontFace: "Calibri", // Tipo de fonte
-    color: "FFFFFF", // Cor do texto (branco)
-    bold: true // Negrito
-  };
-  slide.addText(paisContinenteText, paisContinenteTextOptions);
+  // Adiciona o título e o texto ao slide "Onde vivem" usando as configurações de awaySlideText
+  addSlideText(pptxgen, ondeVivemSlide, "Onde vivem", apresentacao.ondeVivem);
 
   // Salva a apresentação como arquivo PPTX
   pres.writeFile({
