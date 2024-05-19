@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Gerador de Apresentações PPTX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação em React que permite aos usuários gerar apresentações em PowerPoint (.pptx) a partir de dados inseridos em um formulário. A aplicação é projetada para facilitar a criação de apresentações sobre povos e suas características, com base nas informações fornecidas.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Formulário para inserção de dados sobre um povo, incluindo informações como nome, país, continente, onde vivem, população, idioma, religião, relação com o cristianismo, entre outros.
+- Validação de campos obrigatórios para garantir que todas as informações necessárias sejam fornecidas.
+- Botão para limpar o formulário, permitindo ao usuário reiniciar o preenchimento dos dados.
+- Geração automática de uma apresentação em PowerPoint (.pptx) com base nos dados fornecidos.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: Biblioteca JavaScript para construção da interface do usuário.
+- react-icons: Biblioteca de ícones para React.
+- pptxgenjs: Biblioteca para gerar arquivos PowerPoint em JavaScript.
+- CSS: Estilização da aplicação.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Componentes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Formulario.js**: Componente principal que contém o formulário para inserção dos dados e lógica para geração da apresentação.
+- **InputField.js**: Componente para campos de entrada de texto.
+- **TextAreaField.js**: Componente para campos de texto maiores (textarea).
+- **Button.js**: Componente para botões de ação (Limpar e Gerar).
 
-### `npm run build`
+### Estilos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Formulario.css**: Arquivo de estilo para o componente de formulário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Utilitários
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **gerarApresentacao.js**: Função que gera a apresentação em PowerPoint com base nos dados fornecidos pelo usuário.
 
-### `npm run eject`
+## Como Executar o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone o repositório:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Guimbo/presentation-generator-away
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navegue até o diretório do projeto:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd presentation-generator-away
+```
 
-## Learn More
+3. Instale as dependências:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Inicie a aplicação:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+## Como Usar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Preencha todos os campos do formulário com as informações sobre o povo que deseja criar a apresentação.
+2. Clique no botão "Gerar" para criar a apresentação em PowerPoint.
+3. Se desejar limpar todos os campos, clique no botão "Limpar".
 
-### Making a Progressive Web App
+## Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Se desejar contribuir com este projeto, siga os passos abaixo:
 
-### Advanced Configuration
+1. Faça um fork do repositório.
+2. Crie uma nova branch para a sua feature ou correção de bug (`git checkout -b feature/nova-feature`).
+3. Faça commit das suas alterações (`git commit -m 'Adiciona nova feature'`).
+4. Envie suas alterações para o repositório remoto (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Licença
 
-### Deployment
+Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contato
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para mais informações, entre em contato com [seu-email@dominio.com](mailto:seu-email@dominio.com).
