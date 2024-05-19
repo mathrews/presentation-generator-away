@@ -9,6 +9,7 @@
   --cor-roxo-azulado: #483d8b; /* Roxo mais azulado */
   --cor-roxo-claro: #9370db; /* Cor clara do mesmo roxo */
   --cor-azul-escuro: #00008b; /* Azul escuro */
+  --cor-uva: #5c0788; /* Cor uva */
 }
 
 .form-container {
@@ -27,6 +28,13 @@
   color: var(--cor-roxo-medio); /* Roxo Médio */
   display: flex;
   align-items: center; /* Centralizar ícone verticalmente */
+}
+
+.form-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 .form-icon {
@@ -53,9 +61,8 @@
   outline: none;
 }
 
-/* Ajuste para altura de 500px */
 .form-field textarea {
-  height: 200px;
+  resize: vertical; /* Permite apenas redimensionamento vertical */
 }
 
 .input-row {
@@ -107,11 +114,33 @@
 }
 
 .generate-button {
-  background-color: var(--cor-azul-escuro); /* Azul escuro */
+  background-color: var(--cor-uva); /* Cor uva */
 }
 
 .submit-button:hover,
 .clear-button:hover,
 .generate-button:hover {
   filter: brightness(1.2); /* Aumentar brilho ao passar o mouse */
+}
+
+/* Estilo para a caixa de observação */
+.form-observation {
+  background-color: rgba(136, 92, 223, 0.5); /* Lilás claro com transparência */
+  border: 1px solid var(--cor-lavanda); /* Borda lavanda */
+  color: #fff; /* Texto branco */
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-observation-icon {
+  font-size: 5rem; /* Tamanho aumentado do ícone */
+  margin-right: 1rem;
+  color: #fff; /* Cor branca para o ícone */
+}
+
+.form-observation-text {
+  font-size: 1.0rem; /* Tamanho do texto */
 }
