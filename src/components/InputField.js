@@ -1,7 +1,6 @@
-// InputField.js
 import React from 'react';
 
-function InputField({ label, name, icon, value, onChange, autoComplete, small }) {
+function InputField({ label, name, icon, value, onChange, autoComplete, small, placeholder }) {
   return (
     <div className={`form-field${small ? ' small' : ''}`}>
       <label htmlFor={name}>
@@ -14,7 +13,8 @@ function InputField({ label, name, icon, value, onChange, autoComplete, small })
           name={name}
           value={value}
           onChange={onChange}
-          autoComplete={autoComplete}
+          autoComplete={autoComplete ? 'on' : 'off'}
+          placeholder={placeholder}
         />
       </div>
     </div>
