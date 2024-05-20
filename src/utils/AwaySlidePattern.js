@@ -1,10 +1,10 @@
 class AwaySlidePattern {
     addDefaultContent(pptx, slide) {
       // Caminho da imagem de fundo
-      const imagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/background_image.png";
+      const imagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/background_image.png";
   
       // Caminho da imagem de canto esquerdo
-      const cornerImagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/away_intercessao.png";
+      const cornerImagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/away_intercessao.png";
   
       slide.background = { path: imagePath };
   

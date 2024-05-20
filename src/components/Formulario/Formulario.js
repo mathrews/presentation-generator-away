@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import InputField from './InputField';
-import TextAreaField from './TextAreaField';
-import Button from './Button';
+import InputField from '../InputField/InputField.js';
+import TextAreaField from '../TextAreaField/TextAreaField.js';
+import Button from '../Button/Button.js';
 import './Formulario.css';
 import { FaUsers, FaMapMarkedAlt, FaMapPin, FaMapSigns, FaPeopleCarry, FaLanguage, FaPrayingHands, FaChurch, FaBible, FaInfoCircle, FaQuestionCircle, FaCross, FaHandshake, FaExclamationCircle } from 'react-icons/fa';
-import gerarApresentacao from '../utils/gerarApresentacao';
+import gerarApresentacao from '../../utils/gerarApresentacao';
 
 function Formulario() {
   const [formData, setFormData] = useState({
