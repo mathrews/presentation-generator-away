@@ -1,7 +1,6 @@
 // src/App.js
-
 import React from 'react';
-import Formulario from './components/Formulario';
+import Formulario from './components/Formulario/Formulario.js';
 
 function App() {
   return (
