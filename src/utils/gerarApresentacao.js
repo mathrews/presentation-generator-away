@@ -13,7 +13,8 @@ const gerarApresentacao = (apresentacao) => {
   let slide = pres.addSlide();
   addTitleSlide(pptxgen, slide, apresentacao);
 
-  // Função para adicionar um slide com título e texto
+  // Função para adicionar um slide com título e texto. TOFIX: título não está aparecendo 
+  // nos slides.
   const addCustomSlide = (title, text) => {
     let slide = pres.addSlide();
     const slidePattern = new AwaySlidePattern();
@@ -21,14 +22,17 @@ const gerarApresentacao = (apresentacao) => {
     addSlideText(pptxgen, slide, title, text);
   };
 
-  // Adiciona slides personalizados
+  // Adiciona slides personalizados TOFIX: título não está aparecendo 
+  // nos slides.
   addCustomSlide("Onde vivem", apresentacao.ondeVivem);
   addCustomSlide("População", apresentacao.populacao);
   addCustomSlide("Idioma e Tradução", apresentacao.idiomaETraducao);
-  addCustomSlide("Religião", apresentacao.religiao);
-  addCustomSlide("Relação com o Cristianismo", apresentacao.relacaoComOCristianismo);
+  addLargeTextSlide(pptxgen, pres, "Religião e Cristianismo", apresentacao.religiaoECristianismo); // TODO: Fazer com que quando o limite de parágrafos exceda
+  // em um slide, os parágrafos que não cabem passem para outros slides.
+  
 
-  // Adiciona slide "Brasil e No Mundo"
+  // Adiciona slide "Brasil e No Mundo" TOFIX: título não está aparecendo 
+  // nos slides.
   let worldAndBrazilSlide = pres.addSlide();
   addWorldAndBrazilSlide(pptxgen, worldAndBrazilSlide, {
     cristaosNoBrasil: apresentacao.cristaosNoBrasil,
@@ -37,13 +41,13 @@ const gerarApresentacao = (apresentacao) => {
     evangelicosPeloMundo: apresentacao.evangelicosPeloMundo
   });
 
-  // Adiciona slides adicionais com tratamento especial para textos longos
+  // Adiciona slides adicionais com tratamento especial para textos longos TOFIX: título não está aparecendo nos slides. 
   addLargeTextSlide(pptxgen, pres, "Introdução", apresentacao.introducao);
   addLargeTextSlide(pptxgen, pres, "Como vivem", apresentacao.comoVivem);
   addLargeTextSlide(pptxgen, pres, "Em que acreditam", apresentacao.emQueAcreditam);
   addLargeTextSlide(pptxgen, pres, "Intercessão", apresentacao.intercessao);
 
-  // Adiciona slide de logo
+  // Adiciona slide de logo 
   let logoSlide = pres.addSlide();
   const logoSlidePattern = new LogoSlide();
   logoSlidePattern.addContent(pptxgen, logoSlide);
