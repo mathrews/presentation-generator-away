@@ -12,6 +12,7 @@
 - [x] Agroup components in folders with other stuffs linked with themselves.
 
 ## Interface:
+- [] Fix bug when in textAreas the text is being blocked when make C-C C-V and the text is large.
 - [] Transform the fields religion and relationship with Christianity into one, changing the name to “religion and Christianity”, allocate logic \n. NOTE: transform separate texts with an empty line into other text blocks.
 - [] Add notice with text formatting rules in the intersection field to help with formatting blocks and slides.
 - [] Adjust text size in the Brazil and World fields.

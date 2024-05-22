@@ -92,7 +92,8 @@ function Formulario() {
         gerarApresentacao(formData);
     };
 
-    return (
+    return ( 
+        // TOFIX: Quando o slide faz quebras de linha, bloqueiam e fica impossibilitado de escrever.
         <div className="form-container">
             <img
                 src="https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/intercessao_logo.png"
