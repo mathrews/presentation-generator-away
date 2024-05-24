@@ -13,8 +13,7 @@ const gerarApresentacao = (apresentacao) => {
   let slide = pres.addSlide();
   addTitleSlide(pptxgen, slide, apresentacao);
 
-  // Função para adicionar um slide com título e texto. TOFIX: título não está aparecendo 
-  // nos slides.
+  // Função para adicionar um slide com título e texto. 
   const addCustomSlide = (title, text) => {
     let slide = pres.addSlide();
     const slidePattern = new AwaySlidePattern();
@@ -22,8 +21,7 @@ const gerarApresentacao = (apresentacao) => {
     addSlideText(pptxgen, slide, title, text);
   };
 
-  // Adiciona slides personalizados TOFIX: título não está aparecendo 
-  // nos slides.
+  // Adiciona slides personalizados 
   addCustomSlide("Onde vivem", apresentacao.ondeVivem);
   addCustomSlide("População", apresentacao.populacao);
   addCustomSlide("Idioma e Tradução", apresentacao.idiomaETraducao);
@@ -31,8 +29,7 @@ const gerarApresentacao = (apresentacao) => {
   // em um slide, os parágrafos que não cabem passem para outros slides.
   
 
-  // Adiciona slide "Brasil e No Mundo" TOFIX: título não está aparecendo 
-  // nos slides.
+  // Adiciona slide "Brasil e No Mundo" 
   let worldAndBrazilSlide = pres.addSlide();
   addWorldAndBrazilSlide(pptxgen, worldAndBrazilSlide, {
     cristaosNoBrasil: apresentacao.cristaosNoBrasil,
@@ -41,7 +38,7 @@ const gerarApresentacao = (apresentacao) => {
     evangelicosPeloMundo: apresentacao.evangelicosPeloMundo
   });
 
-  // Adiciona slides adicionais com tratamento especial para textos longos TOFIX: título não está aparecendo nos slides. 
+  // Adiciona slides adicionais com tratamento especial para textos longos
   addLargeTextSlide(pptxgen, pres, "Introdução", apresentacao.introducao);
   addLargeTextSlide(pptxgen, pres, "Como vivem", apresentacao.comoVivem);
   addLargeTextSlide(pptxgen, pres, "Em que acreditam", apresentacao.emQueAcreditam);

@@ -12,13 +12,14 @@
 - [x] Agroup components in folders with other stuffs linked with themselves.
 
 ## Interface:
-- [] Fix bug when in textAreas the text is being blocked when make C-C C-V and the text is large.
+- [x] Allign header image with inputs
+- [x] Adjust limit to 13 characters in Brazil and world input.
 - [] Transform the fields religion and relationship with Christianity into one, changing the name to “religion and Christianity”, allocate logic \n. NOTE: transform separate texts with an empty line into other text blocks.
 - [] Add notice with text formatting rules in the intersection field to help with formatting blocks and slides.
 - [] Adjust text size in the Brazil and World fields.
-- [] Adjust limit to 13 characters in Brazil and world input.
 - [] have its own popup when the user copies a text with more than 13 characters in the Brazil and world fields.
 - [] Adjust wrong text in the infoBox.
+- [] make responsive layout.
 
 ## Slide generation:
 - [] Leave it at the pre-defined default.

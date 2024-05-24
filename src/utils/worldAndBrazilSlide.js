@@ -38,12 +38,12 @@ const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
   };
 
   // Adiciona subtítulos e textos para "Brasil"
-  slide.addText(`Cristãos: ${textos.cristaosNoBrasil}`, { ...subtitleOptions, y: "40%" });
-  slide.addText(`Evangélicos: ${textos.evangelicosNoBrasil}`, { ...subtitleOptions, y: "50%" });
+  slide.addText(`Cristãos: ${textos.cristaosNoBrasil}%`, { ...subtitleOptions, y: "40%" });
+  slide.addText(`Evangélicos: ${textos.evangelicosNoBrasil}%`, { ...subtitleOptions, y: "50%" });
 
   // Adiciona subtítulos e textos para "No mundo"
-  slide.addText(`Cristãos: ${textos.cristaosPeloMundo}`, { ...subtitleOptions, x: "55.5%", y: "40%" });
-  slide.addText(`Evangélicos: ${textos.evangelicosPeloMundo}`, { ...subtitleOptions, x: "55.5%", y: "50%" });
+  slide.addText(`Cristãos: ${textos.cristaosPeloMundo}%`, { ...subtitleOptions, x: "55.5%", y: "40%" });
+  slide.addText(`Evangélicos: ${textos.evangelicosPeloMundo}%`, { ...subtitleOptions, x: "55.5%", y: "50%" });
 };
 
 export default addWorldAndBrazilSlide;

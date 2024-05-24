@@ -60,8 +60,7 @@ function Formulario() {
                 ondeVivem: "",
                 populacao: "",
                 idiomaETraducao: "",
-                religiao: "",
-                relacaoComOCristianismo: "",
+                religiaoECristianismo: "",
                 cristaosNoBrasil: "",
                 evangelicosNoBrasil: "",
                 cristaosPeloMundo: "",
@@ -93,7 +92,6 @@ function Formulario() {
     };
 
     return ( 
-        // TOFIX: Quando o slide faz quebras de linha, bloqueiam e fica impossibilitado de escrever.
         <div className="form-container">
             <img
                 src="https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/intercessao_logo.png"
@@ -112,6 +110,7 @@ function Formulario() {
                     value={formData.nomeDoPovo}
                     onChange={handleChange}
                     autoComplete="on"
+                    className="form-field"
                 />
 
                 <div className="input-row">
@@ -209,7 +208,6 @@ function Formulario() {
                         icon={<FaBible />}
                         value={formData.cristaosNoBrasil}
                         onChange={handleChange}
-                        autoComplete="on"
                     />
 
                     <InputField
@@ -223,7 +221,6 @@ function Formulario() {
                         icon={<FaBible />}
                         value={formData.evangelicosNoBrasil}
                         onChange={handleChange}
-                        autoComplete="on"
                     />
                 </div>
 
@@ -239,7 +236,6 @@ function Formulario() {
                         icon={<FaBible />}
                         value={formData.cristaosPeloMundo}
                         onChange={handleChange}
-                        autoComplete="on"
                     />
 
                     <InputField
@@ -253,7 +249,6 @@ function Formulario() {
                         icon={<FaBible />}
                         value={formData.evangelicosPeloMundo}
                         onChange={handleChange}
-                        autoComplete="on"
                     />
                 </div>
 
