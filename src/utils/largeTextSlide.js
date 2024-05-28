@@ -1,7 +1,7 @@
 import AwaySlidePattern from "./AwaySlidePattern";
 
 const addLargeTextSlide = (pptxgen, pres, title, text) => {
-  const fontSize = 20;
+  const fontSize = 18;
   const fontFace = "Calibri";
   const color = "FFFFFF";
 

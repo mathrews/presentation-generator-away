@@ -36,7 +36,7 @@ class AwaySlidePattern {
       // Adicionando texto na parte inferior do slide
       const textoXPercent = imageXPercent; // borda esquerda alinhada com a borda esquerda da imagem
       const textoYPercent = 100 - 10; // 10pt de distância do bottom do slide
-      slide.addText("Around the World Announcing Yeshua", { x: `${textoXPercent}%`, y: `${textoYPercent}%`, w: "44%", h: "10%", align: pptx.AlignLeft, fontSize: 18, fontFace: "Calibri", color: "FFFFFF", bold: true });
+      slide.addText("Around the World Announcing Yeshua", { x: `${textoXPercent}%`, y: `${textoYPercent}%`, w: "44%", h: "10%", align: pptx.AlignLeft, fontSize: 14, fontFace: "Calibri", color: "FFFFFF", bold: true });
   
       // Adicionando um quadrado branco ao lado direito do texto com distância de 3% e aumentando em 30pt
       const squareTextWidthPercent = 100 - textoXPercent - 44; // largura do quadrado em porcentagem
