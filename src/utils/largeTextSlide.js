@@ -6,7 +6,7 @@ const addLargeTextSlide = (pptxgen, pres, title, text) => {
   const color = "FFFFFF";
 
   // Função para adicionar texto em slides com formatação padrão
-  const addSlideWithText = (title, text) => {
+  const addSlideWithText = (title, text, text1) => {
     let slide = pres.addSlide();
     const slidePattern = new AwaySlidePattern();
     slidePattern.addDefaultContent(pptxgen, slide);
@@ -26,7 +26,19 @@ const addLargeTextSlide = (pptxgen, pres, title, text) => {
     slide.addText(text.trim(), {
       x: "1.6%",
       y: "32%",
-      w: "99%",
+      w: "50%",
+      h: "70%",
+      align: "left",
+      valign: "top",
+      fontSize: fontSize,
+      fontFace: fontFace,
+      color: color
+    });
+
+    slide.addText(text1.trim(), {
+      x: "51.6%",
+      y: "32%",
+      w: "50%",
       h: "70%",
       align: "left",
       valign: "top",
@@ -35,15 +47,19 @@ const addLargeTextSlide = (pptxgen, pres, title, text) => {
       color: color
     });
   };
-
+  
   // Função para dividir o texto em múltiplos slides ao detectar quebras de linha
   const addTextAcrossSlides = (title, text) => {
     const paragraphs = text.split(/\r?\n\r?\n/); // Considera duas quebras de linha seguidas como divisão de parágrafos
-
-    paragraphs.forEach((paragraph, index) => {
-      addSlideWithText(title, paragraph);
-    });
+    if (paragraphs.length > 1) {
+      for (let i = 0; i < paragraphs.length; i += 2) {
+        const text1 = paragraphs[i];
+        const text2 = paragraphs[i + 1];
+        addSlideWithText(title, text1, text2);
+      }
+    }
   };
+
 
   addTextAcrossSlides(title, text);
 };

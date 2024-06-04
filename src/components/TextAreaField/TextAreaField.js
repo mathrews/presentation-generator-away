@@ -12,7 +12,7 @@ function TextAreaField({
     const handleKeyDown = (e) => {
         const { value } = e.target;
         const newValue = value + e.key;
-        if (newValue.split("\n").length > 10) {
+        if (newValue.split("\n").length > 15) {
             e.preventDefault();
         }
     };

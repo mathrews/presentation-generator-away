@@ -24,7 +24,7 @@ const gerarApresentacao = (apresentacao) => {
   // Adiciona slides personalizados 
   addCustomSlide("Onde vivem", apresentacao.ondeVivem);
   addCustomSlide("População", apresentacao.populacao);
-  addCustomSlide("Idioma e Tradução", apresentacao.idiomaETraducao);
+  addLargeTextSlide(pptxgen, pres, "Idioma e Tradução", apresentacao.idiomaETraducao);
   addLargeTextSlide(pptxgen, pres, "Religião e Cristianismo", apresentacao.religiaoECristianismo); // TODO: Fazer com que quando o limite de parágrafos exceda
   // em um slide, os parágrafos que não cabem passem para outros slides.
   

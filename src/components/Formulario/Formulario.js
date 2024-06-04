@@ -258,7 +258,7 @@ function Formulario() {
                     <div className="form-observation-text">
                         Para quebrar o texto dos campos a seguir em slides,
                         adicione uma linha vazia entre os textos. É recomendado
-                        que cada slide não tenha mais do que 10 linhas.
+                        que cada slide não tenha mais do que 14 linhas e que cada bloco de texto tenha no máximo 3 linhas.
                     </div>
                 </div>
 
