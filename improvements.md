@@ -1,7 +1,5 @@
 # List of improvements for this project.
 
----
-
 ## Code improvements
 - [x] Remove strict mode in Index.
 - [x] Add custom port in "npm start" command (`export PORT=3006 react-scripts start`).
