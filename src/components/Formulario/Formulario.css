@@ -74,6 +74,7 @@
   display: flex;
   gap: 1rem;
   justify-content: space-between; /* Distribuir botões */
+  align-items: end;
 }
 
 .input-container {
@@ -160,4 +161,36 @@
 
 .form-observation-text {
   font-size: 1.0rem; /* Tamanho do texto */
+}
+
+@media (min-width: 350px) and (max-width: 500px){
+  .form-container {
+    padding: 0.5em;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .form-icon {
+    margin-right: 0.1em;
+  } 
+}
+
+@media (min-width: 250px) and (max-width: 400px){
+  .form-container {
+    padding: 0.5em;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .form-icon {
+    margin-right: 0.1em;
+  }
+
+  .input-row {
+    display: block;
+  }
 }

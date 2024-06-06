@@ -1,5 +1,5 @@
 class AwaySlidePattern {
-    addDefaultContent(pptx, slide) {
+    addDefaultContent(pptx, slide, logo) {
       // Caminho da imagem de fundo
       // const imagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/background_image.png"; ORIGINAL
   
@@ -8,19 +8,29 @@ class AwaySlidePattern {
       // Caminho da imagem de canto esquerdo
       // const cornerImagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/away_intercessao.png"; ORIGINAL
 
-      const cornerImagePath = "https://raw.githubusercontent.com/mathrews/presentation-generator-away/develop/src/assets/away_intercessao.png"; // development
+      const cornerImagePath = logo; // development
   
       slide.background = { path: imagePath };
   
       // Adicionando a imagem ao slide com as dimensões ajustadas
-      const imageWidth = 500; // largura ajustada da imagem em pixels
-      const imageHeight = 140; // altura da imagem em pixels
+      let imageWidth; // largura ajustada da imagem em pixels
+      if (logo === "../assets/Captura_de_tela_de_2024-06-06_15-11-44-removebg-preview.png") {
+        imageWidth = 500;
+      } else {
+        imageWidth = 750;
+      }
+      let imageHeight; // altura da imagem em pixels
+      if (logo === "../assets/Captura_de_tela_de_2024-06-06_15-11-44-removebg-preview.png") {
+        imageHeight = 150;
+      } else {
+        imageHeight = 150;
+      }
       const slideLayout = slide.layout || {}; // obtendo o layout do slide
       const slideWidth = slideLayout.width || 960; // largura do slide padrão
       const slideHeight = slideLayout.height || 540; // altura do slide padrão
       const imageWidthPercent = ((2/3) * imageWidth / slideWidth) * 100; // largura da imagem em porcentagem
       const imageHeightPercent = ((2/3) * imageHeight / slideHeight) * 100; // altura da imagem em porcentagem
-      const imageXPercent = 2; // posição X da imagem em porcentagem
+      const imageXPercent = 1; // posição X da imagem em porcentagem
       const imageYPercent = 2; // posição Y da imagem em porcentagem
       slide.addImage({ path: cornerImagePath, w: `${imageWidthPercent}%`, h: `${imageHeightPercent}%`, x: `${imageXPercent}%`, y: `${imageYPercent}%` });
   

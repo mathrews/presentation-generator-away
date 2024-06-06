@@ -1,0 +1,17 @@
+.first-div {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+}
+
+@media (min-width: 350px) and (max-width: 450px) {
+    .first-div {
+        padding: 0.5em;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 400px) {
+    .first-div {
+        padding: 0.5em;
+    }
+}

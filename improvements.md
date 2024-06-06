@@ -12,8 +12,8 @@
 ## Interface:
 - [x] Allign header image with inputs
 - [x] Adjust limit to 13 characters in Brazil and world input.
-- [] Transform the fields religion and relationship with Christianity into one, changing the name to “religion and Christianity”, allocate logic \n. NOTE: transform separate texts with an empty line into other text blocks.
-- [] make responsive layout.
+- [x] Transform the fields religion and relationship with Christianity into one, changing the name to “religion and Christianity”, allocate logic \n. NOTE: transform separate texts with an empty line into other text blocks.
+- [x] make responsive layout.
 - [] IMPROVE: Add notice with text formatting rules in the intersection field to help with formatting blocks and slides.
 
 ## Slide generation:

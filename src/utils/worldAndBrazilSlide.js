@@ -1,9 +1,10 @@
 import AwaySlidePattern from "./AwaySlidePattern";
+import logo from "../assets/Captura_de_tela_de_2024-06-06_15-11-44-removebg-preview.png";
 
 const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
   // Adiciona conteúdo padrão ao slide
   const slidePattern = new AwaySlidePattern();
-  slidePattern.addDefaultContent(pptxgen, slide);
+  slidePattern.addDefaultContent(pptxgen, slide, logo);
 
   // Configurações de texto para o título
   const titleOptions = {

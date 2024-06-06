@@ -5,6 +5,7 @@ import addSlideText from "./awaySlideText";
 import addWorldAndBrazilSlide from "./worldAndBrazilSlide";
 import addLargeTextSlide from "./largeTextSlide";
 import LogoSlide from "./logoSlide";
+import logo from "../assets/Captura_de_tela_de_2024-06-06_15-11-44-removebg-preview.png"
 
 const gerarApresentacao = (apresentacao) => {
   let pres = new pptxgen();
@@ -17,7 +18,7 @@ const gerarApresentacao = (apresentacao) => {
   const addCustomSlide = (title, text) => {
     let slide = pres.addSlide();
     const slidePattern = new AwaySlidePattern();
-    slidePattern.addDefaultContent(pptxgen, slide);
+    slidePattern.addDefaultContent(pptxgen, slide, logo);
     addSlideText(pptxgen, slide, title, text);
   };
 
