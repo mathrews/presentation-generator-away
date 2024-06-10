@@ -17,7 +17,9 @@ const addTitleSlide = (pptxgen, slide, apresentacao) => {
     fontSize: 80, // Tamanho da fonte
     fontFace: "Calibri", // Tipo de fonte
     color: "FFFFFF", // Cor do texto (branco)
-    bold: true // Negrito
+    bold: true, // Negrito
+    shadow: { type: "outer", color: "FFFFFF", blur: 3, offset: 2, angle: 45 },
+    isTextBox: true,
   };
   slide.addText(nomeDoPovoText, nomeDoPovoTextOptions);
 
@@ -32,7 +34,8 @@ const addTitleSlide = (pptxgen, slide, apresentacao) => {
     fontSize: 40, // Tamanho da fonte
     fontFace: "Calibri", // Tipo de fonte
     color: "FFFFFF", // Cor do texto (branco)
-    bold: true // Negrito
+    bold: true, // Negrito
+    shadow: { type: "outer", color: "FFFFFF", blur: 3, offset: 2, angle: 45 }
   };
   slide.addText(paisContinenteText, paisContinenteTextOptions);
 };

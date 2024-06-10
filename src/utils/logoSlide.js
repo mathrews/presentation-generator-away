@@ -1,42 +1,30 @@
+import logo from "../assets/away_logo.png"
+import intercessao_logo from "../assets/intercessao_logo.png"
+import background from "../assets/background_image.png"
+
 class LogoSlide {
     constructor() {
-      // Configurações das imagens
-      // this.awayLogoImage = {
-      //   path: "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/away_logo.png",
-      //   x: "10%",
-      //   y: "10%",
-      //   w: "80%",
-      //   h: "40%"
-      // }; // ORIGINAL
+      
 
       this.awayLogoImage = {
-        path: "https://raw.githubusercontent.com/mathrews/presentation-generator-away/develop/src/assets/away_logo.png",
+        path: logo,
         x: "10%",
         y: "10%",
         w: "80%",
         h: "40%"
       }; // development
       
-      // this.intercessaoLogoImage = {
-      //   path: "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/intercessao_logo.png",
-      //   x: "15%",
-      //   y: "53%",
-      //   w: "70%",
-      //   h: "40%"
-      // }; // ORIGINAL
+     
 
       this.intercessaoLogoImage = {
-        path: "https://raw.githubusercontent.com/mathrews/presentation-generator-away/develop/src/assets/intercessao_logo.png",
+        path: intercessao_logo,
         x: "15%",
         y: "53%",
         w: "70%",
         h: "40%"
       }; // development
-  
-      // Configuração da imagem de fundo
-      // this.backgroundImagePath = "https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/assets/background_image.png"; // ORIGINAL
 
-      this.backgroundImagePath = "https://raw.githubusercontent.com/mathrews/presentation-generator-away/develop/src/assets/background_image.png"; // development
+      this.backgroundImagePath = background; // development
     }
   
     // Adiciona as imagens e imagem de fundo ao slide

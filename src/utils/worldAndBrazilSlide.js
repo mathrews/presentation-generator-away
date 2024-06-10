@@ -9,21 +9,21 @@ const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
   // Configurações de texto para o título
   const titleOptions = {
     x: "0%",
-    y: "30%",
+    y: "26%",
     w: "50%",
     h: "10%",
     align: "left",
-    fontSize: 40,
+    fontSize: 34,
     fontFace: "Calibri",
     color: "FFFFFF",
-    bold: true
+    bold: true,
   };
 
   // Adiciona título "Brasil" na esquerda
-  slide.addText("No Brasil", { ...titleOptions, x: "5%" });
+  slide.addText("No Brasil:", { ...titleOptions, x: "5%" });
 
   // Adiciona título "No mundo" na direita
-  slide.addText("No mundo", { ...titleOptions, x: "55%" });
+  slide.addText("No mundo:", { ...titleOptions, x: "55%" });
 
   // Configurações de texto para os subtítulos
   const subtitleOptions = {
@@ -33,7 +33,7 @@ const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
     h: "10%",
     align: "left",
     fontSize: 25,
-    fontFace: "Calibri",
+    fontFace: "Arial",
     color: "FFFFFF",
     bold: false
   };

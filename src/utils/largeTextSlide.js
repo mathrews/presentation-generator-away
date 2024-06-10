@@ -2,7 +2,7 @@ import AwaySlidePattern from "./AwaySlidePattern";
 import logo from "../assets/Captura_de_tela_de_2024-06-06_15-12-05-removebg-preview.png";
 
 const addLargeTextSlide = (pptxgen, pres, title, text) => {
-  const fontSize = 16;
+  const fontSize = 18;
   const fontFace = "Calibri";
   const color = "FFFFFF";
 
@@ -21,7 +21,7 @@ const addLargeTextSlide = (pptxgen, pres, title, text) => {
       fontSize: 34,
       fontFace: "Calibri",
       color: "FFFFFF",
-      bold: true
+      bold: true,
     });
 
     slide.addText(text.trim(), {

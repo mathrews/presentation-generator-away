@@ -9,7 +9,7 @@ const addSlideText = (pptxgen, slide, title, text) => {
       fontSize: 34, 
       fontFace: "Calibri", 
       color: "FFFFFF", 
-      bold: true 
+      bold: true,
     });
   
     // Adiciona o texto ao slide

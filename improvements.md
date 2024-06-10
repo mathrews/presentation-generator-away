@@ -17,18 +17,16 @@
 - [] IMPROVE: Add notice with text formatting rules in the intersection field to help with formatting blocks and slides.
 
 ## Slide generation:
-- [] Leave it at the pre-defined default.
-- [] Change the logos to the 2 pre-defined ones and alternate them on each slide.
-- [] Slide in Brazil and around the world: adjust text size.
-- [] Away text at the base of the slide.
-- [] Logo Swap without title Slide.
+- [x] Change the logos to the 2 pre-defined ones and alternate them on each slide.
+- [x] Slide in Brazil and around the world: adjust text size.
+- [x] Away text at the base of the slide.
+- [x] Religion and relationship with Christianity be 1 slide only.
+- [x] Improve “Christian…” percentage texts.
 - [] Add shape behind slide titles.
-- [] Change image of text slides.
-- [] Religion and relationship with Christianity be 1 slide only.
-- [] Improve “Christian…” percentage texts.
+- [] Leave it at the pre-defined default.
 
 ## Tests: 
-- [] Add tests e2e with cypress (sugestion).
-- [] Add tests with Jest.
 - [] Clean test files before write tests with Jest.
+- [] Add tests with Jest.
+- [] Add tests e2e with cypress (sugestion).
 
