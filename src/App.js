@@ -1,10 +1,11 @@
 // src/App.js
 import React from 'react';
 import Formulario from './components/Formulario/Formulario.js';
+import "./app.css"
 
 function App() {
   return (
-    <div style={{ maxWidth: '600px', margin: 'auto', padding: '2rem' }}>
+    <div className='first-div'>
       <Formulario />
     </div>
   );
