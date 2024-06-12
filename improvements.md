@@ -22,8 +22,8 @@
 - [x] Away text at the base of the slide.
 - [x] Religion and relationship with Christianity be 1 slide only.
 - [x] Improve “Christian…” percentage texts.
-- [] Add shape behind slide titles.
-- [] Leave it at the pre-defined default.
+- [x] Add shape behind slide titles.
+- [x] Leave it at the pre-defined default.
 
 ## Tests: 
 - [] Clean test files before write tests with Jest.

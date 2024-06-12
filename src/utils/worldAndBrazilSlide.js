@@ -16,14 +16,28 @@ const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
     fontSize: 34,
     fontFace: "Calibri",
     color: "FFFFFF",
-    bold: true,
+    shadow: { type: "outer", color: "ed7d31", blur: 1, offset: 3, angle: 45, opacity: 1 },
+    bold: false,
+  };
+
+  const titleOptions2 = {
+    x: "0%",
+    y: "26%",
+    w: "50%",
+    h: "10%",
+    align: "left",
+    fontSize: 34,
+    fontFace: "Calibri",
+    color: "FFFFFF",
+    shadow: { type: "outer", color: "ed7d31", blur: 1, offset: 3, angle: 45, opacity: 1 },
+    bold: false,
   };
 
   // Adiciona título "Brasil" na esquerda
   slide.addText("No Brasil:", { ...titleOptions, x: "5%" });
 
   // Adiciona título "No mundo" na direita
-  slide.addText("No mundo:", { ...titleOptions, x: "55%" });
+  slide.addText("No mundo:", { ...titleOptions2, x: "55%" });
 
   // Configurações de texto para os subtítulos
   const subtitleOptions = {
@@ -33,9 +47,9 @@ const addWorldAndBrazilSlide = (pptxgen, slide, textos) => {
     h: "10%",
     align: "left",
     fontSize: 25,
-    fontFace: "Arial",
+    fontFace: "Congenial Black",
     color: "FFFFFF",
-    bold: false
+    bold: true
   };
 
   // Adiciona subtítulos e textos para "Brasil"
