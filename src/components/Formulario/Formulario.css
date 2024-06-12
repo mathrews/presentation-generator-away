@@ -15,11 +15,12 @@
 .form-container {
   max-width: 500px;
   margin: auto;
-  padding: 2rem;
+  padding: 2em;
   background-color: var(--cor-lilas-claro); /* Lilás claro */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centralizar conteúdo */
+  text-align: center;
+  position: relative;
 }
 
 .form-title {
@@ -35,6 +36,7 @@
   max-width: 500px;
   height: auto;
   margin-bottom: 2rem;
+  border-radius: 4px;
 }
 
 .form-icon {
@@ -55,10 +57,13 @@
 .form-field input,
 .form-field textarea {
   width: 100%;
-  padding: 0.75rem;
   border: 1px solid var(--cor-lavanda); /* Lavanda */
   border-radius: 4px;
   outline: none;
+}
+
+.form-field input {
+  height: 3em;
 }
 
 .form-field textarea {
@@ -69,6 +74,23 @@
   display: flex;
   gap: 1rem;
   justify-content: space-between; /* Distribuir botões */
+  align-items: end;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+
+  & input {
+    padding-left: 1em;
+  }
+
+  & textarea {
+    padding-left: 1em;
+    padding-top: 1em;
+    scrollbar-width: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
 }
 
 .input-row .form-field {
@@ -78,10 +100,6 @@
 .input-row .form-field.small input,
 .input-row .form-field.small textarea {
   width: 100%; /* Aumentar o tamanho dos campos pequenos */
-}
-
-.input-row .form-field:not(.small) {
-  margin-right: 1.5rem; /* Adicionar espaçamento horizontal entre os campos */
 }
 
 .button-container {
@@ -143,4 +161,36 @@
 
 .form-observation-text {
   font-size: 1.0rem; /* Tamanho do texto */
+}
+
+@media (min-width: 350px) and (max-width: 500px){
+  .form-container {
+    padding: 0.5em;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .form-icon {
+    margin-right: 0.1em;
+  } 
+}
+
+@media (min-width: 250px) and (max-width: 400px){
+  .form-container {
+    padding: 0.5em;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .form-icon {
+    margin-right: 0.1em;
+  }
+
+  .input-row {
+    display: block;
+  }
 }
