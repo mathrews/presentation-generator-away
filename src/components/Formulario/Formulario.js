@@ -19,6 +19,7 @@ import {
     FaExclamationCircle,
 } from "react-icons/fa";
 import gerarApresentacao from "../../utils/gerarApresentacao";
+import intercessao_logo from "../../assets/intercessao_logo.png";
 
 function Formulario() {
     const [formData, setFormData] = useState({
@@ -94,7 +95,7 @@ function Formulario() {
     return ( 
         <div className="form-container">
             <img
-                src="https://raw.githubusercontent.com/Guimbo/presentation-generator-away/master/src/utils/intercessao_logo.png"
+                src={intercessao_logo}
                 className="form-logo"
                 alt="Intercessão logo"
             />
